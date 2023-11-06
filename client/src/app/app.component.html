@@ -1,0 +1,38 @@
+<div class="content">
+    <app-left-nav-bar></app-left-nav-bar>
+    <app-top-nav-bar></app-top-nav-bar>
+    <section class="wrap">
+        <ng-container *ngIf="this.topCardsData$ | async as top_cards">
+            <ng-container *ngFor="let card of top_cards">
+                <app-offercards class="gribble-cards" [value]="card.value" [header]="card.header"
+                    [sub_header]="card.sub_header"></app-offercards>
+            </ng-container>
+        </ng-container>
+    </section>
+    <section class="table-container">
+        <ng-container *ngIf="(this.recent_orders$  | async) as recent_orders">
+            <div>
+                <app-recentorder [data]="recent_orders | slice :0:8" class="small-table"></app-recentorder>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="(this.new_users$  | async) as new_user">
+            <div>
+                <app-new-user [data]="new_user | slice :0: 8"></app-new-user>
+            </div>
+        </ng-container>
+    </section>
+    <section class="table-container">
+        <ng-container>
+            <div>
+                <app-sales-statistics></app-sales-statistics>
+            </div>
+            <div>
+                <app-balance-overview></app-balance-overview>
+            </div>
+            <div class="donut-chart">
+                <app-top-products></app-top-products>
+            </div>
+        </ng-container>
+    </section>
+    <!-- {{this.dashboardData | async | json}} -->
+</div>

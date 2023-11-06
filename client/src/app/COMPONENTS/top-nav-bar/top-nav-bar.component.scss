@@ -1,0 +1,27 @@
+.nav {
+
+    &__list {
+        background: white;
+        box-shadow: 0px 0px 10px var(--color-primary);
+        padding: 1rem 0rem;
+        margin: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 2rem;
+
+    }
+
+    &__item {
+        list-style: none;
+        margin-right: 2rem;
+        color: var(--color-primary);
+    }
+
+    &__item:first-child{
+        min-width: 1080px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+}

@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+/* styles.scss */
+//@import url("node_modules/font-awesome/css/font-awesome.min.css");
+body
+{
+//    width:1920px;
+//    height:1080px;
+    background-color: var(--color-primary);
+    margin: 0;
+}
+
+:root {
+    --color-text: #111111;
+    --color-link: #125699;
+    --color-primary: rgb(240, 240, 249);
+    --color-warn: #f8e0b3;
+  }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
